@@ -46,6 +46,10 @@ func main() {
 		log.SetLevel(lvl)
 	}
 
+	if cfg.Tenant.AcceptAll {
+		log.Warnf("Accepting all incoming metrics and replying with a 200 to Prometheus.")
+	}
+
 	proc := newProcessor(*cfg)
 
 	if err = proc.run(); err != nil {

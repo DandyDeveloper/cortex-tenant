@@ -1,7 +1,7 @@
 cortex-tenant
 sink
 generate
-.out
+/out
 *.rpm
 *.deb
 config.yaml
